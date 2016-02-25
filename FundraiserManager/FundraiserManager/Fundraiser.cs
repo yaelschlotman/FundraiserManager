@@ -21,6 +21,8 @@ namespace FundraiserManager
             if (UserData.ToLower() == "y")
             {
                 newFundraiser.CreateNewFundraiser();
+                newFundraiser.EstablishGroupGoalAmount();
+                newFundraiser.EstablishNumberOfParticipants();
             }
             else if (UserData.ToLower() == "n")
             {
@@ -28,25 +30,8 @@ namespace FundraiserManager
             }
         }
 
-        /*public Participant CreateParticipantRecord(string firstName,
-                               string lastName,
-                               string phone,
-                               decimal individualGoal,
-                               decimal amountRaised,
-                               decimal overage,
-                               decimal shortfall,
-                               bool goalAchieved)
-        {
-            
-            return (new Participant(firstName, lastName, phone, individualGoal, amountRaised, overage, shortfall, goalAchieved));
-        }
+        
 
-        public List<Participant> CreateParticipatList()
-        {
-
-            List<Participant> participants = new List<Participant>();
-
-            return participants;
-        }*/
+        
     }
 }

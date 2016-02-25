@@ -9,49 +9,29 @@ namespace FundraiserManager
     public class NewUserData
     {
         FileWriter fileWriter = new FileWriter();
-        string UserData;
-        float UserDataFloat;
-        decimal UserDataDecimal;
-        int UserDataInt;
-       
-
-        //get user data as string
-        //get user data as string, convert to decimal.  Look this up.
-        //Write to the file all info as it is entered.
-
-
-        public void GetUserData(string UserDataNeeded)
+        
+        public string GetUserInputAsString(string UserDataNeeded)
         {
             Console.WriteLine(UserDataNeeded);
-            UserData = Console.ReadLine();
+            return Console.ReadLine();
         }
 
-        public void ConvertUserInputStringToDecimal(string UserDataNeeded)
+        public decimal GetUserInputAsDecimal(string UserDataNeeded)
         {
             Console.WriteLine(UserDataNeeded);
-            UserData = Console.ReadLine();
-            UserDataDecimal = Convert.ToDecimal(UserData);
+            return Convert.ToDecimal(Console.ReadLine());
         }
 
-        public void ConvertUserInputStringToFloat(string UserDataNeeded)
+        public float GetUserInputAsFloat(string UserDataNeeded)
         {
             Console.WriteLine(UserDataNeeded);
-            UserData = Console.ReadLine();
-            UserDataFloat = Convert.ToSingle(UserData);
-            Console.WriteLine(UserDataFloat + UserDataFloat);
-            Console.ReadKey();
-            //get user data as string
-            //get user data as string, convert to .  Look this up.
-            //Write to the file all info as it is entered.
+            return Convert.ToSingle(Console.ReadLine());                
         }
 
-        public void ConverUserInputStringToInt(string UserDataNeeded)
+        public int GetUserInputAsInt(string UserDataNeeded)
         {
             Console.WriteLine(UserDataNeeded);
-            UserData = Console.ReadLine();
-            UserDataInt = Convert.ToInt32(UserData);
-            Console.WriteLine(UserDataInt + UserDataInt);
-            Console.ReadKey();
+            return Convert.ToInt32(Console.ReadLine());                  
         }
     }
 

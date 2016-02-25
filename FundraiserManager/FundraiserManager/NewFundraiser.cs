@@ -16,8 +16,8 @@ namespace FundraiserManager
 
         NewUserData newUserData = new NewUserData();
         FileWriter fileWriter = new FileWriter();
-        
-          
+
+        string UserAnswer; 
         string FundraiserName;
         decimal GroupGoalAmount;
         int NumberOfParticipants;
@@ -25,29 +25,27 @@ namespace FundraiserManager
 
         public void CreateNewFundraiser()
         {
-            newUserData.GetUserData("What is the name of your fundraiser?");
-            FundraiserName = Console.ReadLine();
+            
+            FundraiserName = newUserData.GetUserInputAsString("What is the name of your fundraiser?");
             Console.WriteLine("Fundraiser Name:  " + FundraiserName);
-            Console.ReadKey();
             fileWriter.AddRecordToFile(FundraiserName, FundraiserName);
         }
 
         public void EstablishGroupGoalAmount()
         {
-            newUserData.GetUserData("What is your fundraiser goal amount to raise?");
-            //GroupGoalAmount = Console.ReadLine();
+            
+            GroupGoalAmount = newUserData.GetUserInputAsDecimal("What is your fundraiser goal amount to raise?");
             Console.WriteLine("Group Goal Amount:  " + GroupGoalAmount);
-            Console.ReadKey();
-            //fileWriter.AddRecordToFile(FundraiserName, GroupGoalAmount);
+            
+            //fileWriter.AddRecordToFile(FundraiserName, **convert decimal to string?  or is there a way to write as decimal?);
 
         }
 
-        public void EstablishNumberOfParticipant()
-        {
-            newUserData.GetUserData("How many participants in your fundraiser?");
-           // NumberOfParticipants = Console.ReadLine();
+        public void EstablishNumberOfParticipants()
+        {            
+            NumberOfParticipants = newUserData.GetUserInputAsInt("How many participants in your fundraiser?");
             Console.WriteLine("Number of Participants:  " + NumberOfParticipants);
-            Console.ReadKey();
+            
             //fileWriter.AddRecordToFile(FundraiserName, NumberOfParticipants);
         }
 

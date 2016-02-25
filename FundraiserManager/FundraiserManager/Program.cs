@@ -11,8 +11,10 @@ namespace FundraiserManager
         static void Main(string[] args)
         {
             NewUserData newUserData = new NewUserData();
+            float testX = newUserData.GetUserInputAsFloat("What's the number?");
+            Console.WriteLine(testX + testX);
+            Console.ReadKey();
 
-            newUserData.ConvertUserInputStringToFloat("How many people in your fundraiser?");
 
         }
     }
