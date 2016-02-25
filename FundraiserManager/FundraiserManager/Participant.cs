@@ -10,45 +10,63 @@ namespace FundraiserManager
     {
         string FirstName;
         string LastName;
-        string Phone;
         decimal IndividualGoal;
-        decimal AmountRaised;
-        decimal Overage;
-        decimal Shortfall;
-        bool GoalAchieved;
+        decimal IndividualAmountRaised;
+        decimal IndividualOverage;
+        decimal IndividualShortfall;
+        bool IsIndividualGoalAchieved;
+        Participant NewParticipantRecord;
 
-        public Participant(string firstName, 
-                            string lastName,
-                            string phone,
-                            decimal individualGoal,
-                            decimal amountRaised,
-                            decimal overage,
-                            decimal shortfall,
-                            bool goalAchieved)
+        public Participant CreateNewParticipantRecord(string firstName, string lastName, decimal individualGoal, decimal individualAmountRaised,
+                            decimal individualOverage, decimal individualShortfall, bool isIndividualGoalAchieved)
         {
-            FirstName = firstName;
-            LastName = lastName;
-            Phone = phone;
-            IndividualGoal = individualGoal;
-            AmountRaised = amountRaised;
-            Overage = overage;
-            Shortfall = shortfall;
-            GoalAchieved = goalAchieved;
+            firstName = GetFirstName();
+            lastName = GetLastName();
+            individualGoal = GetIndividualGoal();
+            individualAmountRaised = GetIndividualAmountRaised();
+            individualOverage = GetIndividualOverage();
+            isIndividualGoalAchieved = GetIsIndividualGoalAchieved();
+            Console.WriteLine(firstName + " " + lastName + ",");
+            Console.WriteLine("Individual Goal: " + "$" + individualGoal);
+            Console.WriteLine("Individual Amount Raised: " + "$" + individualAmountRaised);
+            Console.WriteLine("Individual Overage: " + "$" + individualOverage);
+            Console.WriteLine("Individual Shortfall: " + "$" + individualShortfall);
+            Console.WriteLine("Individual Goal Achieved: No");
 
+            return NewParticipantRecord;
         }
 
-        public Participant CreateParticipantRecord(string firstName,
-                                                    string lastName,
-                                                    string phone,
-                                                    decimal individualGoal,
-                                                    decimal amountRaised,
-                                                    decimal overage,
-                                                    decimal shortfall,
-                                                    bool goalAchieved)
+        public string GetFirstName()
         {
-            return (new Participant(firstName, lastName, phone, individualGoal,
-                                    amountRaised, overage, shortfall, goalAchieved));
+            return FirstName;
+        }
 
+        public string GetLastName()
+        {
+            return LastName;
+        }
+
+        public decimal GetIndividualGoal()
+        {
+            return IndividualGoal;
+        }
+
+        public decimal GetIndividualAmountRaised()
+        {
+            return IndividualAmountRaised;
+        }
+
+        public decimal GetIndividualOverage()
+        {
+            return IndividualOverage;
+        }
+        public decimal GetIndividualShortfall()
+        {
+            return IndividualShortfall;
+        }
+        public bool GetIsIndividualGoalAchieved()
+        {
+            return IsIndividualGoalAchieved;
         }
 
 

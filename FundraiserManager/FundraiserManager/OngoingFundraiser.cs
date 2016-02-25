@@ -8,5 +8,6 @@ namespace FundraiserManager
 {
     class OngoingFundraiser
     {
+
     }
 }

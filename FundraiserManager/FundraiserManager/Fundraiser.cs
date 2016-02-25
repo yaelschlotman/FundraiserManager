@@ -24,7 +24,7 @@ namespace FundraiserManager
             }
             else if (UserData.ToLower() == "n")
             {
-                Console.WriteLine("Cannot find file.  Try again.");
+                
             }
         }
 

@@ -10,9 +10,10 @@ namespace FundraiserManager
     {
         static void Main(string[] args)
         {
-            Fundraiser fundraiser = new Fundraiser();
+            NewUserData newUserData = new NewUserData();
 
-            fundraiser.InitializeFundraiser();
+            newUserData.ConvertUserInputStringToFloat("How many people in your fundraiser?");
+
         }
     }
 }

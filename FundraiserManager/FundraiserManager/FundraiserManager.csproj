@@ -48,6 +48,7 @@
     <Compile Include="Fundraiser.cs" />
     <Compile Include="GoalTracker.cs" />
     <Compile Include="NewFundraiser.cs" />
+    <Compile Include="NewParticipant.cs" />
     <Compile Include="NewUserData.cs" />
     <Compile Include="OngoingFundraiser.cs" />
     <Compile Include="OngoingUserData.cs" />
@@ -55,14 +56,9 @@
     <Compile Include="Participant.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserInput.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="GroupRecord.txt" />
-    <Content Include="ParticipantRecord.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

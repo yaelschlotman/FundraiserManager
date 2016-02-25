@@ -14,11 +14,7 @@ namespace FundraiserManager
             return IndividualGoalAmount;
         }
 
-        public static decimal SetGroupGoalAmount(decimal CostPerParticipant, int NumberInGroup)
-        {
-            decimal GroupGoalAmount = CostPerParticipant * NumberInGroup;
-            return GroupGoalAmount;
-        }
+        
 
         public static void TrackProgressToGoal(decimal GoalAmount,
                                                 decimal AmountSold,
